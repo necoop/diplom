@@ -231,6 +231,8 @@ body {
 /* Секция main */
 .main{
   margin-top: 63px;
+  display: flex;
+  justify-content: space-between;
 }
 .post__list{
   max-width: 778px;
@@ -246,6 +248,7 @@ body {
 .post__content{
   max-width: 367px;
   width: 100%;
+  margin-top: -12px;
 }
 .tags__list{
   display: flex;
@@ -254,6 +257,10 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 2.86;
+  margin-bottom: -5px;
+}
+.tags__item{
+  text-transform: uppercase;
 }
 h2{
   text-transform: uppercase;
@@ -261,21 +268,68 @@ h2{
   line-height: 1.2;
   font-weight: 700;
 }
-.post__info{
-  margin-top: 37px;
+.post__content .post__info{
+  margin-top: 17px;
+  margin-bottom: 33px;
   font-size: 12px;
 }
 
-a.date{
+.date, a.date{
   color: #888888;
   margin-right: 12px;
+  font-weight: 400;
+  font-size: 12px;
 }
 a.author{
   font-weight: 700;
   line-height: 3.33;
 }
 .post__summary{
-  margin-top: 55px;
   font-size: 15px;
   line-height: 1.47;
+}
+.new__posts{
+  max-width: 272px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.29;
+  font-weight: 700;
+}
+.new__posts h3{
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+.new__posts > h3::after{
+content: "";
+position: absolute;
+top: 28px;
+left: 50%;
+display: block;
+opacity: 0.400;
+width: 66px;
+height: 3px;
+background-color: #b59f5b;
+transform: translate(-50%, 0);
+}
+.new__post__item a{
+  display: flex;
+  gap: 20px;
+}
+.new__post__item img{
+  margin-top: 2px;
+  margin-left: -3px;
+}
+.new__post__item .date{
+  position: relative;
+  top: -3px;
+}
+.new__posts__list{
+  margin-top: 40px;
+}
+.new__post__item .post__info{
+  text-align: left;
+}
+.post__info h3{
+  text-align: left;
 }
