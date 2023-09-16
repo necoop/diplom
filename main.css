@@ -335,6 +335,9 @@ a.author {
     flex-direction: column;
     align-items: center;
   }
+  .aside{
+    max-width: 367px;
+  }
 }
 
 /* Форма поиска */
