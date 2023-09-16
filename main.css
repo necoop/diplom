@@ -38,9 +38,6 @@ a:hover {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   font-size: inherit;
   font-weight: inherit;
@@ -335,7 +332,7 @@ a.author {
     flex-direction: column;
     align-items: center;
   }
-  .aside{
+  .aside {
     max-width: 367px;
   }
 }
@@ -387,6 +384,7 @@ a.author {
   color: #fff;
   cursor: pointer;
 }
+
 /* Секция Tags */
 .tags {
   margin-bottom: 60px;
@@ -395,18 +393,17 @@ a.author {
   font-size: 12px;
   text-transform: uppercase;
   color: #0f0d0e;
-  /* padding: 5px 14px; */
   border: 3px solid #eeeeee;
   line-height: 1;
   margin-left: 3px;
   margin-right: 3px;
   margin-bottom: 7px;
 }
-.tag__item a{
+.tag__item a {
   display: block;
   padding: 5px 14px;
 }
-.tag__item:hover{
+.tag__item:hover {
   border: solid #b59f5b;
 }
 /* Секция Topics */
@@ -498,7 +495,6 @@ a.author {
   .tags__list {
     line-height: 1.4;
   }
-
 }
 @media (max-width: 430px) {
   .title__box h1 {
@@ -511,26 +507,26 @@ a.author {
   }
 }
 /* Footer */
-.footer{
+.footer {
   height: 84px;
   width: 100%;
   background-color: #f4f7f6;
-text-align: center;
+  text-align: center;
 }
-.social{
+.social {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
   height: 100%;
 }
-.social__item img{
-width: 20px;
-height: 20px;
+.social__item img {
+  width: 20px;
+  height: 20px;
 }
-.copyright{
+.copyright {
   display: block;
   font-size: 12px;
   color: #999999;
-  margin: 73px 0 41px;
+  padding: 73px 0 41px;
 }
