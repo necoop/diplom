@@ -48,7 +48,16 @@ ul,
 li {
   list-style: none;
 }
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 @font-face {
   font-family: "Open-Sans";
   src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
@@ -72,8 +81,7 @@ body {
   margin: 0 auto;
 }
 .header {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
+  background: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
   background-color: gray;
   background-size: cover;
   background-repeat: no-repeat;
@@ -83,15 +91,34 @@ body {
   color: #fff;
   box-sizing: border-box;
   background-position: center;
+  position: relative;
+}
+.header > :not(:first-child) {
+  position: relative;
+  z-index: 10;
+}
+.header::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
 }
 .burger {
   display: none;
-  z-index: 10;
+  z-index: 20;
   position: absolute;
 }
 #burger {
   position: fixed;
   appearance: none;
+}
+.side__nav__menu{
+  left: 100%
 }
 #burger:checked ~ .side__nav__menu {
   left: 0;
@@ -116,7 +143,7 @@ body {
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 5;
+  z-index: 20;
 }
 .burger .logo {
   width: 179px;
@@ -167,9 +194,8 @@ body {
 }
 .nav__menu {
   display: flex;
-  width: 100%;
-  max-width: 462px;
-  justify-content: space-between;
+  gap: 36px;
+  justify-content: end;
   align-items: center;
   text-transform: uppercase;
 }
@@ -240,11 +266,18 @@ body {
   text-transform: uppercase;
   margin-right: 20px;
 }
+.tags__item a:hover {
+  text-decoration: underline;
+}
 h2 {
   text-transform: uppercase;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
+}
+h2:hover,
+.post__info h3:hover {
+  color: #b59f5b;
 }
 .post__content .post__info {
   margin-top: 17px;
@@ -342,11 +375,22 @@ a.author {
   height: 50px;
   width: 100%;
   display: flex;
+  box-sizing: border-box;
+  /* border-top: 1px solid #fff; */
+
   margin-bottom: 63px;
 }
 .search input {
   width: calc(100% - 50px);
   height: 100%;
+  border-top: 1px solid #f4f7f6;
+  border-left: 1px solid #f4f7f6;
+  border-bottom: 1px solid #f4f7f6;
+}
+.search input:focus {
+  border-top: 1px solid #b59f5b;
+  border-left: 1px solid #b59f5b;
+  border-bottom: 1px solid #b59f5b;
 }
 .search input,
 .newsletter input {
@@ -364,6 +408,9 @@ a.author {
   background-position: center;
   cursor: pointer;
 }
+.search button:hover {
+  background-color: #323232;
+}
 
 /* Секция рассылки */
 .newsletter {
@@ -373,6 +420,10 @@ a.author {
   height: 50px;
   width: 100%;
   margin-bottom: 17px;
+  border: 1px solid #f4f7f6;
+}
+.newsletter input:focus {
+  border: 1px solid #b59f5b;
 }
 .newsletter button {
   width: 100%;
@@ -384,6 +435,9 @@ a.author {
   color: #fff;
   cursor: pointer;
 }
+.newsletter button:hover {
+  background-color: #323232;
+}
 
 /* Секция Tags */
 .tags {
@@ -393,7 +447,6 @@ a.author {
   font-size: 12px;
   text-transform: uppercase;
   color: #0f0d0e;
-  border: 3px solid #eeeeee;
   line-height: 1;
   margin-left: 3px;
   margin-right: 3px;
@@ -402,8 +455,9 @@ a.author {
 .tag__item a {
   display: block;
   padding: 5px 14px;
+  border: 3px solid #eeeeee;
 }
-.tag__item:hover {
+.tag__item a:hover {
   border: solid #b59f5b;
 }
 /* Секция Topics */
@@ -411,7 +465,7 @@ a.author {
   padding: 14px 0;
   border-bottom: 1px solid #eeeeee;
 }
-.topic__item:hover {
+.topic__item a:hover {
   color: #b59f5b;
 }
 .topics sup {

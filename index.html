@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg"
+        type="image/x-icon">
     <title>NOEMI</title>
 </head>
 
 <body>
     <header class="header">
         <div class="burger">
-            <input type="checkbox" name="burger" id="burger" checked:none>
+            <input type="checkbox" name="burger" id="burger">
             <label for="burger"><span></span></label>
             <ul class="side__nav__menu">
                 <li class="nav__menu__item"><img
@@ -180,7 +182,7 @@
         </ul>
         <aside class="aside">
             <section class="new__post">
-                <h3><a href="#0">Новые посты</a></h3>
+                <h3>Новые посты</h3>
                 <ul class="new__posts__list">
                     <li class="new__post__item">
                         <a href="#0">
@@ -236,12 +238,14 @@
             </section>
             <form action="#0" method="get" class="search">
                 <input type="text" placeholder="Найти...">
+                <small class="visually-hidden">Найти в нашем блоге</small>
                 <button type="submit"></button>
             </form>
             <section class="newsletter">
                 <h3>Рассылка</h3>
                 <form action="#0" method="get">
                     <input type="email" placeholder="Ваш email-адрес">
+                    <small class="visually-hidden">Введите ваш e-mail для подписки на новости нашего блога</small>
                     <button type="submit">Подписаться</button>
                 </form>
             </section>
@@ -261,12 +265,12 @@
             <section class="topics">
                 <h3>Темы</h3>
                 <ul class="topics__list">
-                    <li class="topic__item"><a href="#0">Красота<sup>12</sup></a></li>
-                    <li class="topic__item"><a href="#0">Здоровье<sup>4</sup></a></li>
-                    <li class="topic__item"><a href="#0">Образ жизни<sup>145</sup></a></li>
-                    <li class="topic__item"><a href="#0">Музыка<sup>28</sup></a></li>
-                    <li class="topic__item"><a href="#0">Спорт<sup>62</sup></a></li>
-                    <li class="topic__item"><a href="#0">Йога<sup>8</sup></a></li>
+                    <li class="topic__item"><a href="#0">Красота</a><sup>12</sup></li>
+                    <li class="topic__item"><a href="#0">Здоровье</a><sup>4</sup></li>
+                    <li class="topic__item"><a href="#0">Образ жизни</a><sup>145</sup></li>
+                    <li class="topic__item"><a href="#0">Музыка</a><sup>28</sup></li>
+                    <li class="topic__item"><a href="#0">Спорт</a><sup>62</sup></li>
+                    <li class="topic__item"><a href="#0">Йога</a><sup>8</sup></li>
                 </ul>
             </section>
         </aside>
@@ -275,15 +279,18 @@
         <ul class="social">
             <li class="social__item"><a href="#0"><img
                         src="https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg"
-                        alt=""></a></li>
+                        alt="Мы в социальной сети dribbble"><span class="visually-hidden">Мы в социальной сети
+                        dribbble</span></a></li>
             <li class="social__item"><a href="#0"><img
                         src="https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg"
-                        alt=""></a></li>
+                        alt="Мы в социальной сети pinterest"><span class="visually-hidden">Мы в социальной сети
+                        pinterest</span></a></li>
             <li class="social__item"><a href="#0"><img
                         src="https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg"
-                        alt=""></a></li>
+                        alt="Мы в социальной сети tumblr"><span class="visually-hidden">Мы в социальной сети
+                        tumblr</span></a></li>
         </ul>
-        <span class="copyright">Copyright © 2009–2019 City Blog LLC.</span>
+        <span class="copyright"><a href="#0">Copyright © 2009–2019 City Blog LLC.</a></span>
     </footer>
 </body>
 
