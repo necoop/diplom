@@ -48,16 +48,7 @@ ul,
 li {
   list-style: none;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 @font-face {
   font-family: "Open-Sans";
   src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
@@ -86,11 +77,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  /* height: 31.51vw; */
-  /* padding-top: 29px; */
   color: #fff;
   box-sizing: border-box;
   background-position: center;
+  padding-top: 29px;
   position: relative;
 }
 .header > :not(:first-child) {
@@ -108,65 +98,7 @@ body {
   height: 100%;
   z-index: 5;
 }
-.burger {
-  display: none;
-  z-index: 20;
-  position: absolute;
-}
-#burger {
-  position: fixed;
-  appearance: none;
-}
-.side__nav__menu {
-  left: 100%;
-}
-#burger:checked ~ .side__nav__menu {
-  left: 0;
-}
-#burger:checked ~ label span {
-  transform: rotate(45deg);
-}
-#burger:checked ~ label span::before {
-  top: 0px;
-  transform: rotate(90deg);
-}
-#burger:checked ~ label span::after {
-  top: 0px;
-  transform: rotate(-90deg);
-}
-.burger label {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 20;
-}
-.burger .logo {
-  width: 179px;
-}
-.burger label span,
-.burger label span::before,
-.burger label span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #b59f5b;
-  transition-duration: 0.3s;
-}
 
-.burger label span::before {
-  content: "";
-  top: 8px;
-}
-.burger label span::after {
-  content: "";
-  top: -8px;
-}
 .side__nav__menu {
   position: fixed;
   top: 0;
@@ -179,13 +111,8 @@ body {
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
   transition-duration: 0.3s;
 }
-.burger .nav__menu__item {
-  margin-bottom: 30px;
-  text-transform: capitalize;
-  font-size: 18px;
-}
+
 .nav {
-  padding-top: 29px;
   display: flex;
   justify-content: space-between;
 }
@@ -212,8 +139,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: calc(11.8% - 29px);
-  padding-bottom: calc(10.7% + 29px);
+  margin-top: calc(11.8% - 29px);
 }
 .title__box .header1 {
   font-size: 45px;
@@ -221,13 +147,8 @@ body {
   text-transform: uppercase;
   line-height: 1.67;
   text-align: center;
+  margin-bottom: calc(10.7% + 29px);
   max-width: 710px;
-}
-@media (max-width: 1199px) {
-  .title__box .header1 {
-    font-size: 3.75vw;
-    max-width: 59.2vw;
-  }
 }
 
 /* Секция main */
@@ -253,18 +174,13 @@ body {
   align-self: flex-start;
   margin-right: 15px;
 }
-.post__content {
-  max-width: 367px;
-  /* width: 100%;
-  margin-top: -12px; */
-}
+
 .tags__list {
   display: flex;
   flex-wrap: wrap;
   color: #b59f5b;
   font-weight: 700;
   font-size: 14px;
-  /* line-height: 2.86; */
   margin-bottom: 7px;
 }
 .tags__item {
@@ -304,7 +220,6 @@ a.date {
 }
 a.author {
   font-weight: 700;
-  /* line-height: 3.33; */
   margin: 15px 0;
   display: inline-block;
 }
@@ -316,7 +231,6 @@ a.author {
   max-width: 272px;
   width: 100%;
   font-size: 14px;
-  /* line-height: 1.29; */
   font-weight: 700;
 }
 .aside > * > .header3 {
@@ -363,18 +277,6 @@ a.author {
 .post__info .header3 {
   text-align: left;
 }
-@media (max-width: 1079px) {
-  .new__post {
-    display: none;
-  }
-  .main {
-    flex-direction: column;
-    align-items: center;
-  }
-  .aside {
-    max-width: 367px;
-  }
-}
 
 /* Форма поиска */
 .search {
@@ -382,12 +284,21 @@ a.author {
   width: 100%;
   display: flex;
   box-sizing: border-box;
-  /* border-top: 1px solid #fff; */
   margin-bottom: 63px;
   justify-content: space-between;
 }
 .search :nth-child(1) {
   width: calc(100% - 50px);
+}
+.container .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 #search {
   width: 100%;
@@ -486,6 +397,128 @@ a.author {
   margin-left: 3px;
 }
 
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #f4f7f6;
+  padding: 32px 0;
+}
+.social__icon {
+  width: 20px;
+  height: 20px;
+}
+.dribbble {
+  background-repeat: no-repeat;
+  background: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+}
+.pinterest {
+  background-repeat: no-repeat;
+  background: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+}
+.tumblr {
+  background-repeat: no-repeat;
+  background: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+}
+.copyright {
+  display: block;
+  font-size: 12px;
+  color: #999999;
+  padding: 73px 0 41px;
+}
+
+/* Адаптив */
+.burger {
+  display: none;
+  z-index: 20;
+  position: absolute;
+}
+#burger {
+  position: fixed;
+  appearance: none;
+}
+.side__nav__menu {
+  left: 100%;
+}
+#burger:checked ~ .side__nav__menu {
+  left: 0;
+}
+#burger:checked ~ label span {
+  transform: rotate(45deg);
+}
+#burger:checked ~ label span::before {
+  top: 0px;
+  transform: rotate(90deg);
+}
+#burger:checked ~ label span::after {
+  top: 0px;
+  transform: rotate(-90deg);
+}
+.burger label {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 20;
+}
+.burger .logo {
+  width: 179px;
+}
+.burger label span,
+.burger label span::before,
+.burger label span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #b59f5b;
+  transition-duration: 0.3s;
+}
+.burger label span::before {
+  content: "";
+  top: 8px;
+}
+.burger label span::after {
+  content: "";
+  top: -8px;
+}
+.burger .nav__menu__item {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+@media (max-width: 1199px) {
+  .title__box .header1 {
+    font-size: 3.75vw;
+    max-width: 59.2vw;
+  }
+}
+@media (max-width: 1079px) {
+  .new__post {
+    display: none;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aside {
+    max-width: 367px;
+  }
+  .post__content {
+    max-width: 367px;
+  }
+}
 @media (max-width: 768px) {
   .title__box .header1 {
     font-size: 29px;
@@ -528,39 +561,4 @@ a.author {
   .title__box .header1 {
     font-size: 26px;
   }
-}
-
-/* Footer */
-.footer {
-  /* height: 84px; */
-  width: 100%;
-  /* background-color: #f4f7f6; */
-  text-align: center;
-}
-.social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  background-color: #f4f7f6;
-  padding: 32px 0;
-}
-.social__icon {
-  width: 20px;
-  height: 20px;
-}
-.dribbble {
-  background: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
-}
-.pinterest {
-  background: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
-}
-.tumblr {
-  background: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
-}
-.copyright {
-  display: block;
-  font-size: 12px;
-  color: #999999;
-  padding: 73px 0 41px;
 }
