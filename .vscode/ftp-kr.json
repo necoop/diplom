@@ -1,0 +1,17 @@
+{
+    "host": "77.222.40.105",
+    "username": "amok2005g2",
+    "password": "SJ$rxpvsJbd6hjuW",
+    "remotePath": "noemi_necoop_ru/public_html",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode",
+        "diplom.code-workspace"
+    ]
+}

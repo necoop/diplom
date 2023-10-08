@@ -1,0 +1,40 @@
+{
+  "ftp://amok2005g2@77.222.40.105:21": {
+    "noemi_necoop_ru": {
+      "public_html": {
+        "NOEMI_Modern_ru.jpg": {
+          "type": "-",
+          "size": 597592,
+          "lmtime": 1694856766227.9004,
+          "modified": false
+        },
+        "NOEMI_Modern_ru.psd": {
+          "type": "-",
+          "size": 25026167,
+          "lmtime": 1694365709311.6565,
+          "modified": false
+        },
+        "cgi-bin": {},
+        "htaccess": {
+          "type": "-",
+          "size": 199,
+          "lmtime": 1696673799773.1177,
+          "modified": false
+        },
+        "index.html": {
+          "type": "-",
+          "size": 19247,
+          "lmtime": 1696672508662.6174,
+          "modified": false
+        },
+        "main.css": {
+          "type": "-",
+          "size": 10664,
+          "lmtime": 1696671752161.875,
+          "modified": false
+        }
+      }
+    }
+  },
+  "$version": 1
+}
